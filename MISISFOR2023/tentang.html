@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="logo.png">
+    <title>MISISFOR | HMSI</title>
+    
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text" >
+                <span class="image">
+                    <a href="../index.html">
+                    <img src="images/hmsi.png" alt="logo HMSI"></a>
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">HMSI</span>
+                    <!-- <span class="profession">UTY</span> -->
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="misisfor.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Beranda</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Tentang</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="hotnews.html">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Hot News</span>
+                        </a>
+                    </li>
+
+                    
+                    <li class="nav-link">
+                        <a href="misisfor.html#tim">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text nav-text">Tim Redaksi</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <h1 class="mis" style="text-align: center; ">Tentang Kami</h1>
+        <section>
+            <h1 style="text-align: center;font-size: 60px;"> "JET" </h1>
+            <div>
+                <center> <img src="images/mascot.png" alt="" style="height: 250px;margin-bottom: 30px;">
+                    <h1>Filosofi </h1>
+                    <div style="background-color: aqua; width: fit-content; padding: 10px; border: 1px black solid; border-radius: 15px; margin: 20px;">
+                        <p>
+                            Jet terinspirasi dari sebuah roket yang melambangkan “Terbang tinggi, berinovasi tanpa batas”, 
+                        </p>
+                        <p>
+                            terbang tinggi mengangkasa dengan sistem informasi terdepan!, jelajahi dunia membawa 
+                            informasi ke setiap sudut dunia.
+                        </p>
+                    </div>
+            </div>
+        </section>
+
+
+    <div class="kampus-ulasan-container" style="padding: 20px;">
+        <!-- Maps Kampus -->
+    <div class="kampus-section">
+        <label for="pilihanKampus">Lokasi Kampus:</label>
+        <select id="pilihanKampus" name="pilihanKampus" onchange="pilihKampus()">
+            <option value="kampus1">Kampus 1</option>
+            <option value="kampus2">Kampus 2</option>
+            <option value="kampus3">Kampus 3</option>
+        </select>
+        
+            <!-- Peta Lokasi -->
+        <div id="Kampus1" class="map">
+            <iframe id="mapKampus1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.3998942255766!2d110.35294427411992!3d-7.747338976808147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a588b69ee62ad%3A0x1b03de2cbc7b2bcb!2sKampus%201%20UTY!5e0!3m2!1sid!2sid!4v1706015867742!5m2!1sid!2sid" width="270" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div id="Kampus2" class="map">
+            <iframe id="mapKampus2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.850709032415!2d110.38581107412087!3d-7.80562467748984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57700d6f26f3%3A0xad37476847a319e2!2sKampus%202%20UTY!5e0!3m2!1sid!2sid!4v1706015904281!5m2!1sid!2sid" width="270" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div id="Kampus3" class="map">
+            <iframe id="mapKampus3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.86115871328!2d110.38855727412083!3d-7.804519677476867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a576553b28d19%3A0xbf6185a374c36eb3!2sUTY%20Kampus%203!5e0!3m2!1sid!2sid!4v1706015944425!5m2!1sid!2sid" width="270" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <!-- Kotak Ulasan -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Ulasan</h2>
+            <div class="review-box">
+                <form id="formUlasan">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required>
+    
+                    <label for="ulasan">Ulasan:</label>
+                    <textarea id="ulasan" name="ulasan" rows="4" placeholder="Tulis ulasan Anda di sini..." required></textarea>
+    
+                    <button type="submit">Kirim Ulasan</button>
+                </form>
+            </div>
+            <div id="daftarUlasan" class="user-reviews">
+        </div>
+    </section>
+    <!-- Kotak Ulasan End -->
+    </div>
+    </section>
+    
+    
+
+    <script src="script.js"></script>
+
+    <!-- Script Maps Kampus -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Panggil pilihKampus untuk menetapkan tampilan awal
+    pilihKampus();
+
+    // ... (kode lainnya)
+});
+
+function pilihKampus() {
+    var pilihanKampus = document.getElementById("pilihanKampus");
+    var selectedKampus = pilihanKampus.options[pilihanKampus.selectedIndex].value;
+
+    // Semua peta disembunyikan terlebih dahulu
+    document.getElementById("Kampus1").style.display = "none";
+    document.getElementById("Kampus2").style.display = "none";
+    document.getElementById("Kampus3").style.display = "none";
+
+    // Tampilkan peta yang sesuai dengan pilihan kampus
+    if (selectedKampus === "kampus1") {
+        document.getElementById("Kampus1").style.display = "block";
+    } else if (selectedKampus === "kampus2") {
+        document.getElementById("Kampus2").style.display = "block";
+    } else if (selectedKampus === "kampus3") {
+        document.getElementById("Kampus3").style.display = "block";
+    }
+}
+
+
+    </script>
+
+    <!-- Script Kotak Ulasan -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const formUlasan = document.getElementById("formUlasan");
+    const daftarUlasan = document.getElementById("daftarUlasan");
+
+    formUlasan.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nama = document.getElementById("nama").value;
+        const ulasan = document.getElementById("ulasan").value;
+
+        // Kirim data ulasan ke server menggunakan AJAX
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "ulasan.php", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Tanggapan dari server (mungkin JSON)
+                const response = JSON.parse(xhr.responseText);
+
+                // Tambahkan ulasan baru ke daftar
+                tambahkanUlasan(response.nama, response.ulasan);
+            }
+        };
+
+        // Encode data ulasan ke dalam format URL
+        const data = `nama=${encodeURIComponent(nama)}&ulasan=${encodeURIComponent(ulasan)}`;
+        xhr.send(data);
+
+        // Kosongkan formulir setelah mengirim ulasan
+        formUlasan.reset();
+    });
+
+    function tambahkanUlasan(nama, ulasan) {
+        const divUlasan = document.createElement("div");
+        divUlasan.classList.add("user-review");
+
+        const headingNama = document.createElement("h3");
+        headingNama.textContent = nama;
+
+        const paragraphUlasan = document.createElement("p");
+        paragraphUlasan.textContent = ulasan;
+
+        divUlasan.appendChild(headingNama);
+        divUlasan.appendChild(paragraphUlasan);
+
+        // Tambahkan ulasan baru ke daftar
+        daftarUlasan.appendChild(divUlasan);
+    }
+    });
+
+    </script>
+    
+    <script>
+        // Smooth scroll to section when clicking on the navigation link
+        document.querySelectorAll('.menu-links a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+        
+                const sectionId = this.getAttribute('href');
+        
+                document.querySelector(sectionId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        </script>
+</body>
+</html>

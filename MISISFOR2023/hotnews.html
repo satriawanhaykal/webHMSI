@@ -1,0 +1,153 @@
+<!-- hotnews1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hots.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="logo.png">
+    <title>MISISFOR | HMSI</title>
+    
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text" >
+              <span class="image">
+                <a href="../index.html">
+                <img src="images/hmsi.png" alt="logo HMSI"></a>
+              </span>
+
+                <div class="text logo-text">
+                    <span class="name">HMSI</span>
+                    <!-- <span class="profession">UTY</span> -->
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="misisfor.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Beranda</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="tentang.html">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Tentang</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Hot News</span>
+                        </a>
+                    </li>
+
+                    
+                    <li class="nav-link">
+                        <a href="misisfor.html#tim">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text nav-text">Tim Redaksi</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+      <h1 class="mis" style="text-align:center; margin-top: -20px;">Hot News</h1>
+    <div class="container">
+        <main class="grid">
+          <article>
+            <img src="images/comingsoon.png" alt="Sample photo">
+            <div class="text">
+              <h3>Perbedaan Sistem Informasi dan Informatika</h3>
+              <p>Masihhh bingung mauu masuk prodi yang manaa? Buruan cek menurut kamu, kamu minat jurusan apaa niih??</p>
+              <a href="/MISISFOR2023/blog/blog1.html" class="btn btn-primary btn-block">Read more</a>
+            </div>
+          </article>
+        </main>
+      </div>
+    </section>
+      
+
+    <script src="script.js"></script>
+    <script>
+        // Smooth scroll to section when clicking on the navigation link
+        document.querySelectorAll('.menu-links a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+        
+                const sectionId = this.getAttribute('href');
+        
+                document.querySelector(sectionId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        </script>
+    <script>
+      // Simpan jumlah unduhan dalam objek
+    const downloadCount = {};
+
+    document.querySelectorAll('.btn-primary').forEach(button => {
+        button.addEventListener('click', function() {
+            const downloadLink = this.getAttribute('href');
+            
+            // Periksa apakah sudah ada unduhan sebelumnya
+            if (downloadCount[downloadLink]) {
+                downloadCount[downloadLink]++;
+            } else {
+                downloadCount[downloadLink] = 1;
+            }
+            
+            // Perbarui tampilan jumlah unduhan
+            const articleText = this.closest('.text');
+            const downloadSpan = articleText.querySelector('.download-count');
+            downloadSpan.textContent = `${downloadCount[downloadLink]} download${downloadCount[downloadLink] > 1 ? 's' : ''}`;
+        });
+    });
+
+    </script>
+    
+</body>
+</html>
