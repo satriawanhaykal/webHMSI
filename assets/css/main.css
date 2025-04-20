@@ -26,7 +26,7 @@
 body {
   font-family: var(--font-primary);
   color: var(--color-default);
-  background-image: url(../img/team/humas/1.jpg);
+  background-image: url(../img/bg.jpg);
   /* tambahan */
   background-repeat: no-repeat;
   background-attachment: fixed;
