@@ -1,9 +1,9 @@
-name: SFTP Deploy to Rumahweb
+name: FTP Deploy ke Hosting
 
 on:
   push:
     branches:
-      - main
+      - main  # Sesuaikan dengan branch utama Anda
 
 jobs:
   deploy:
@@ -13,12 +13,16 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Deploy via SFTP
-        uses: appleboy/scp-action@v0.1.7
+      - name: Deploy via FTP
+        uses: SamKirkland/ftp-deploy-action@v4.3.4
         with:
-          host: ${{ secrets.FTP_HOST }}
+          server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          source: "./"
-          target: ${{ secrets.FTP_PATH }} # Ganti path-nya sesuai dengan akun kamu
+          server-dir: ${{ secrets.FTP_PATH }}
+          local-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.github/**
