@@ -1,9 +1,9 @@
-name: FTP Deploy ke Hosting
+name: SFTP Deploy to Rumahweb
 
 on:
   push:
     branches:
-      - main  # Sesuaikan dengan branch utama Anda
+      - main
 
 jobs:
   deploy:
@@ -16,15 +16,9 @@ jobs:
       - name: Deploy via SFTP
         uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 22
-          local-dir: ./dist
-          server-dir: ${{ secrets.FTP_PATH }}
-
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            **/.github/**
+          source: "dist/**"
+          target: ${{ secrets.FTP_PATH }} # Ganti path-nya sesuai dengan akun kamu
