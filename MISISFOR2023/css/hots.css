@@ -1,12 +1,11 @@
-
 /* hotnews1.css */
-:root{
+:root {
   /* ===== Colors ===== */
   --body-color: #fff;
   --sidebar-color: orange;
   --primary-color: yellow;
-  --primary-color-light: #F6F5FF;
-  --toggle-color: #DDD;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
   --text-color: #000000;
 
   /* ====== Transition ====== */
@@ -15,7 +14,7 @@
   --tran-04: all 0.3s ease;
   --tran-05: all 0.3s ease;
 }
-body.dark{
+body.dark {
   --body-color: #242526;
   --sidebar-color: #242526;
   --primary-color: #3a3b3c;
@@ -24,46 +23,50 @@ body.dark{
   --text-color: #ccc;
 }
 body {
-    padding: 20px 0px 20px 5px;
-    
-  }
-  .home{
-    position: absolute;
-    padding-left: 270px;
-    height: 100vh;
-    width: 100%;
-    padding-right: 10px;
-    box-sizing: border-box;
-    background-color: var(--body-color);
-    transition: var(--tran-05);
+  padding: 20px 0px 20px 5px;
 }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    grid-gap: 20px;
-    align-items: stretch;
-  }
-   h3,p,a {
-    color: var(--text-color);
-    font-size: 15px;
-   }
-  .grid > article {
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-  }
-  
-  .grid > article img {
-    max-width: 100%;
-  }
-  
-  .grid .text {
-    padding: 20px;
-  }
-  
-  /* Responsiveness for smaller screens */
+.home {
+  position: absolute;
+  padding-left: 270px;
+  height: 100vh;
+  width: 100%;
+  padding-right: 10px;
+  box-sizing: border-box;
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 15px;
+  align-items: stretch;
+  border-radius: 15px;
+}
+h3,
+p,
+a {
+  color: var(--text-color);
+  font-size: 10px;
+}
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+.grid > article img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.grid .text {
+  padding: 20px;
+}
+
+/* Responsiveness for smaller screens */
 @media (max-width: 768px) {
-    .grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-gap: 10px;
-    }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
   }
+}
