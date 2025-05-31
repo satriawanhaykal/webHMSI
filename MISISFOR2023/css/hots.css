@@ -42,11 +42,15 @@ body {
   align-items: stretch;
   border-radius: 15px;
 }
-h3,
+h3{
+
+  color: var(--text-color);
+  font-size: 13px;
+}
 p,
 a {
   color: var(--text-color);
-  font-size: 10px;
+  font-size: 12px;
 }
 .grid > article {
   border: 1px solid #ccc;
